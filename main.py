@@ -9,15 +9,23 @@ if not check_password():
 # region <--------- Streamlit App Configuration --------->
 st.set_page_config(
     layout="centered",
-    page_title="My Streamlit App"
+    page_title="talking flexi homepage"
 )
 # endregion <--------- Streamlit App Configuration --------->
 
-st.title("Streamlit App")
+st.title("_talking flexi_")
 
-form = st.form(key="form")
-form.subheader("Prompt")
-
-user_prompt = form.text_area("Enter your prompt here", height=200)
-
-st.write(user_prompt)
+st.markdown(
+    """
+    <style>
+    .custom-text {
+        font-family: 'Cursive', sans-serif;
+        color: #A9A9A9;  
+        font-size: 24px;  
+    }
+    </style>
+    <p class="custom-text">Practise having difficult conversations with your
+    boss or report! And learn more about how flexible work arrangements could
+    work for you and your organisation.</p>
+    """, unsafe_allow_html=True
+)
