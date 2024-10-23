@@ -1,11 +1,11 @@
 bs4==0.0.2
 crewai==0.1.5
 httptools==0.6.4
-langchain-chroma==0.1.4
-langchain-experimental==0.3.2
-langchain-openai==0.0.2.post1
-langchain-text-splitters==0.3.0
-langchainhub==0.1.21
+langchain-chroma
+langchain-experimental
+langchain-openai
+langchain-text-splitters
+langchainhub
 pip-chill==1.0.3
 pydantic-settings==2.6.0
 pypdf==5.0.1
