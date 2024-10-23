@@ -1,6 +1,6 @@
 import os
 import streamlit as st
-from openai import OpenAI
+#from openai import OpenAI
 from dotenv import load_dotenv
 from helper_functions.llm import query_rag 
 
@@ -11,7 +11,7 @@ if load_dotenv('.env'):
 else:
    OPENAI_KEY = st.secrets['OPENAI_API_KEY']
 
-client = OpenAI(api_key=OPENAI_KEY)
+#client = OpenAI(api_key=OPENAI_KEY)
 
 # Initialise model number
 if "openai_model" not in st.session_state:
