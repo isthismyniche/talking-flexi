@@ -61,7 +61,6 @@ langchain-experimental
 langchain-openai
 langchain-text-splitters
 langchainhub
-langsmith
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 marshmallow==3.23.0
