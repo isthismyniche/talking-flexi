@@ -46,12 +46,12 @@ def split_text(documents: list[Document]):
 
   # Split documents into smaller chunks using text splitter
   chunks = text_splitter.split_documents(documents)
-  print(f"Split {len(documents)} documents into {len(chunks)} chunks.")
+  #print(f"Split {len(documents)} documents into {len(chunks)} chunks.")
 
   # Print example of page content and metadata for a chunk
-  document = chunks[0]
-  print(document.page_content)
-  print(document.metadata)
+  #document = chunks[0]
+  #print(document.page_content)
+  #print(document.metadata)
 
   return chunks # Return the list of split text chunks
 
