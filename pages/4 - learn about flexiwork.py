@@ -2,6 +2,7 @@ import os
 import streamlit as st
 from openai import OpenAI
 from dotenv import load_dotenv
+from helper_functions.llm import query_rag 
 
 # Retrieve and load Open AI key
 if load_dotenv('.env'):
@@ -34,14 +35,18 @@ if prompt := st.chat_input("What would you like to know?"):
         st.markdown(prompt)
     
     with st.chat_message("assistant"):
-        stream = client.chat.completions.create(
-            model=st.session_state["openai_model"],
-            messages=[
-                {"role": m["role"], "content": m["content"]}
-                for m in st.session_state.messages
-            ],
-        stream=True,
-        )
-        response = st.write_stream(stream)
+        #stream = client.chat.completions.create(
+         #   model=st.session_state["openai_model"],
+          #  messages=[
+           #     {"role": m["role"], "content": m["content"]}
+            #    for m in st.session_state.messages
+            #],
+    
+        #stream=True,
+        #)
+
+        formatted_response, response_text = query_rag(prompt)
+        
+        response = st.write(response_text)
     
     st.session_state.messages.append({"role": "assistant", "content": response})
